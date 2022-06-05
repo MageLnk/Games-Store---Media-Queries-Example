@@ -28,6 +28,7 @@ body {
 
 .main-content {
   grid-area: main-content;
+  height: 100%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -98,10 +99,12 @@ body {
       "main-content"
       "footer";
   }
+
   .group-cards {
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 60%;
   }
 }
