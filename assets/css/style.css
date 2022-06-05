@@ -5,7 +5,27 @@ body {
 
 .side-bar {
   grid-area: side-bar;
-  background-color: rgb(172, 174, 179);
+  background-color: rgb(0, 97, 207);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.logito {
+  margin: 1rem;
+}
+.side-bar p {
+  padding: 0.1rem 0 0.1rem 0;
+  margin: 0;
+}
+.side-bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-selector {
+  display: none;
 }
 
 .filter {
@@ -106,5 +126,17 @@ body {
   }
   .card {
     width: 60%;
+  }
+
+  .side-bar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .side-bar .info {
+    display: none;
+  }
+  .menu-selector {
+    display: inline;
+    margin: 1rem;
   }
 }
