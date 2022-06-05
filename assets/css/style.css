@@ -1,0 +1,107 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.side-bar {
+  grid-area: side-bar;
+  background-color: rgb(172, 174, 179);
+}
+
+.filter {
+  grid-area: filter;
+  background-color: rgb(6, 38, 97);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.filter p {
+  padding: 0;
+  margin: 0.15rem 0 0 0;
+}
+.filter input {
+  width: 85%;
+  padding: 0.1rem;
+}
+
+.main-content {
+  grid-area: main-content;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-content nav {
+  margin-top: 1rem;
+}
+.group-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 20%;
+  height: auto;
+  border: 1px solid grey;
+  margin: 0.4rem 0.8rem 0.4rem 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.card img {
+  width: 100%;
+  padding: 0.2rem;
+}
+.card button {
+  background-color: rgb(6, 38, 97);
+  color: white;
+  width: 6rem;
+  font-size: 15px;
+  margin: 0.4rem;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(6, 38, 97);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer p {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.container-all {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 1.1fr 10fr 1fr;
+  grid-template-areas:
+    "side-bar filter"
+    "side-bar main-content"
+    "footer main-content";
+}
+
+@media (max-width: 576px) {
+  .container-all {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 8fr 0.8fr;
+    grid-template-areas:
+      "side-bar"
+      "filter"
+      "main-content"
+      "footer";
+  }
+  .group-cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
